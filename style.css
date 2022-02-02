@@ -1,0 +1,297 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav { 
+    color: white;
+      
+    padding: 20px 10px;
+  }
+
+  #allback {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 3000px ;
+  }
+  
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .btn span {
+    position: absolute;
+    border-radius: 50%;
+    /* To make it round */
+    background-color: rgba(0, 0, 0, 0.3);
+  
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    /* for positioning */
+    margin-left: -50px;
+  
+    animation: ripple 1s;
+    opacity: 0;
+  }
+  
+  /* Add animation */
+  @keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+  
+    to {
+        opacity: 0;
+        transform: scale(10);
+    }
+  }
+
+  .TECHNEWS0 {
+      
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .search {
+    background-image: url('images/search.jpg');
+    display: flex;
+    align-items: center;
+    background-color: rgb(46, 46, 49);
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .searchInput::placeholder {
+    color: lightgray;
+  }
+
+  .navBottom {
+      margin-top: 50px;
+      margin-bottom: 0px;
+
+    display: flex;
+    align-items:center ;
+    justify-content:left;
+  }
+  
+  .menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: lightgray;
+    font-weight: 500;
+  }
+  #joinus {
+      margin-left: 600px;
+
+  }
+  
+  input[type=text] {
+    background-image: url('images/search.jpg');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #8d84c4;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(224, 218, 218);
+  opacity: 0.8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(27, 103, 173);}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.btn {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(27, 103, 173);
+  opacity: 0.8;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+
+  /* We need this to position
+      span inside button */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+
+}
+#slideback {
+  margin: 0;
+  
+}
+
+.container {
+  margin-top: 0px;
+  padding-left: 300px;
+  padding-right: 200px;
+  border-color: rgb(27, 103, 173);
+  border-radius: 2px;
+  
+  opacity: 0.8;
+}
+#slider {
+  position: relative;
+  width: 800px;
+  height: 400px;
+ 
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+ 
+  float: left;
+}
+#slider ul li img{
+  width: 800px;
+  height: 400px;
+}
+ 
+#slider #prev, #slider #next {
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 1rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+#slider #prev:hover, #slider #next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+#slider #prev {
+  left: 10px;
+}
+#slider #next {
+  right: 10px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img {
+  width: 400px;
+  height: 300px;
+}
+
+#img1 {
+  padding: 80px 150px;
+}
+
+#img2 {
+  padding: 80px 280px;
+}
+
+#img3 {
+  padding: 0px 150px;
+}
+
+#img4 {
+  padding: 1px 280px;
+}
+
+.cont {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  margin-left: 200px;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
